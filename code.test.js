@@ -1,7 +1,7 @@
 const fs = require('fs');
 const assert = require('assert');
 
-eval(fs.readFileSync('code.js') + '');
+eval(fs.readFileSync('code.js') + '\n' + \global.__POOL__ = pool');
 
 (async () => {
     // Test 1, empty array.
@@ -60,5 +60,6 @@ eval(fs.readFileSync('code.js') + '');
             "Test 6 failed.");
     }
 
+    const pool = global.__POOL__;
     pool.destroy();
 })();
