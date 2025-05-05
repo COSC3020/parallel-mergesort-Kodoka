@@ -59,4 +59,6 @@ eval(fs.readFileSync('code.js') + '');
         assert(JSON.stringify(expected) == JSON.stringify(output),
             "Test 6 failed.");
     }
+
+    pool.destroy();
 })();
