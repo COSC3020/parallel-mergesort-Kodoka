@@ -1,7 +1,7 @@
 const fs = require('fs');
 const assert = require('assert');
 
-eval(fs.readFilesSync('code.js') + '');
+eval(fs.readFileSync('code.js') + '');
 
 (async () => {
     // Test 1, empty array.
