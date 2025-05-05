@@ -121,10 +121,3 @@ async function parallelMergeSort(array)
     // Join, merge the sorted halves.
     return merge(sortedLeft, sortedRight);
 }
-
-(async () => {
-    var testArray = [0, 3, 4, 23, 5, 12, 6, 6, 324, 432, 21, 4, 5];
-    var sorted = await parallelMergeSort(testArray);
-    console.log("Sorted: ", JSON.stringify(sorted));
-    pool.destroy();
-})();
