@@ -17,7 +17,7 @@ It may help to consider the DAG of the parallel program.
 
 My parallel mergesort does two main things: it forks two tasks in parallel,
 with
-'''
+'''javascript
 var [sortedLeft, sortedRight] = await Promise.all([
     pool.exec(left),
     pool.exec(right)
