@@ -16,13 +16,12 @@ It may help to consider the DAG of the parallel program.
 ## My Runtime Analysis
 
 My parallel mergesort does two main things: it forks two tasks in parallel,
-with
-'''javascript
+with  
+'''js
 var [sortedLeft, sortedRight] = await Promise.all([
     pool.exec(left),
     pool.exec(right)
 ]);
-
 '''
 
 ## Sources
