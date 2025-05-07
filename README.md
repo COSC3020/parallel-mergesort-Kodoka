@@ -23,6 +23,14 @@ var [sortedLeft, sortedRight] = await Promise.all([
     pool.exec(right)
 ]);
 ```
+And then merges them with  
+```js
+return merge(sortedLeft, sortedRight);
+```
+The forking process gives us a depth of $log(n)$, and then once the workers
+both return sorted left and right subarrays, the merging process takes
+$\Theta(n)$ work. Thus the span of my parallel mergesort is $\Theta(n \cdot
+\log(n))$
 
 ## Sources
 
